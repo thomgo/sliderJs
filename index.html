@@ -52,10 +52,10 @@
 
         // ~~~~~~~~ Slider exemple ~~~~~~~~~~
 
-
         // Store the paths of your image in an array and the associated descriptions
         var paths = ["img/background.jpg","img/supports.jpg", "img/temoignage_droite.jpg"];
         var descriptions = ["first description", "second description", "third description"];
+        var maxIndex = paths.length - 1;
 
         // Get the image and the description paragraphe from the DOM
         var imageContainer = document.getElementById("slider_image");
@@ -69,7 +69,7 @@
 
         // Function to update the index and display the associated image and description
         function setImage () {
-          currentIndex < 2 ? currentIndex +=1 : currentIndex = 0;
+          currentIndex < maxIndex ? currentIndex +=1 : currentIndex = 0;
           setCurrentContent();
         }
 
@@ -83,7 +83,7 @@
         // Function to show next or previous content
         function show(direction) {
           clearInterval(sliderTurn);
-          direction === true ? (currentIndex < 2 ? currentIndex ++ : currentIndex = 0) : (currentIndex > 0 ? currentIndex -- : currentIndex = 2);
+          direction === true ? (currentIndex < maxIndex ? currentIndex ++ : currentIndex = 0) : (currentIndex > 0 ? currentIndex -- : currentIndex = 2);
           setCurrentContent();
           sliderTurn = setInterval(setImage, 3000);
         }
