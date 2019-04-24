@@ -2,6 +2,8 @@
 
 Il s'agit d'un exercice que j'ai produit dans le cadre de mon poste de formateur en développement web. En réalisant ce slider, les apprenants travaillent les principaux concepts du DOM et la gestion des événements.
 
+Projet visible à : https://thomgo.github.io/sliderJs/
+
 Ils apprennent à :
 
 - Manipuler des tableaux
