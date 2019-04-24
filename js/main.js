@@ -14,7 +14,7 @@
        }
 
        // Function to update the index and display the associated image and description
-       function setImage () {
+       function setIndex() {
          currentIndex < maxIndex ? currentIndex +=1 : currentIndex = 0;
          setCurrentContent();
        }
@@ -24,12 +24,12 @@
        setCurrentContent();
 
        // Launches the setimage function every 3 secondes
-       var sliderTurn = setInterval(setImage, 3000);
+       var sliderTurn = setInterval(setIndex, 3000);
 
        // Function to show next or previous content
-       function show(direction) {
+       function show(direction = false) {
          clearInterval(sliderTurn);
-         direction === true ? (currentIndex < maxIndex ? currentIndex ++ : currentIndex = 0) : (currentIndex > 0 ? currentIndex -- : currentIndex = 2);
+         direction === true ? (currentIndex < maxIndex ? currentIndex ++ : currentIndex = 0) : (currentIndex > 0 ? currentIndex -- : currentIndex = maxIndex);
          setCurrentContent();
-         sliderTurn = setInterval(setImage, 3000);
+         sliderTurn = setInterval(setIndex, 3000);
        }
