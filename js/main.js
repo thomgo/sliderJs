@@ -1,5 +1,5 @@
 // Store the paths of your image in an array and the associated descriptions
-       var paths = ["img/background.jpg","img/supports.jpg", "img/temoignage_droite.jpg"];
+       var paths = ["img/background.jpg","img/supports.jpg", "img/suede.jpg"];
        var descriptions = ["first description", "second description", "third description"];
        var maxIndex = paths.length - 1;
 
